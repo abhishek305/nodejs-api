@@ -1,0 +1,92 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a test API to demostrate query params to get greetings response of the name entered in query.",
+    "version": "1.0.0",
+    "title": "Query Greeting's API",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "abhishekshaji1994@gmail.com"
+    },
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "host": "query-api-nodejs.herokuapp.com",
+  "tags": [
+    {
+      "name": "Greetings",
+      "description": "Get name on entering query name",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://swagger.io"
+      }
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "name"
+        ],
+        "summary": "Enter query parameter name to get the birthday greetings string e.g. name = Elon Musk\"",
+        "description": "Its returns greetings string on entering name on query params e.g. https://query-api-nodejs.herokuapp.com/?name=name",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Enter name to query greetings string",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "stateCode": {
+                  "type": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "stateCode": {
+                  "type": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
