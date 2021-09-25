@@ -1,6 +1,7 @@
 # NodeJS Express API To Query String Params Into Response
 
-## Demo URL : https://query-api-nodejs.herokuapp.com/?name=test-name
+## Demo URL: 
+  link : https://query-api-nodejs.herokuapp.com/?name=test-name
 
 1. Clone repo or download the zip file.
 2. Unzip the folder & navigate to the root directory in an appropriate code editor.
